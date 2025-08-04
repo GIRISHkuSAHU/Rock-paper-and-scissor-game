@@ -10,18 +10,18 @@ def logic():
     while True:
         choice = [0, 1, -1]
         computer_choice = random.choice(choice)
-        youDict = {"paper": 1, "scissor": -1, "rock": 0}
+        dict = {"paper": 1, "scissor": -1, "rock": 0}
         reverseDict = {1: "paper", -1: "scissor", 0: "rock"}
         # taking user input 
         user = input("Enter your choice (rock, paper, scissor): ").lower()
         # check if user input is right or not 
-        if user not in youDict:
+        if user not in dict:
             print("You entered something wrong. Please try again.\n")
             return
 
         # main logic of game
 
-        user_choice = youDict[user]
+        user_choice = dict[user]
         print(f"you choosed  {reverseDict[user_choice]} and computer choosed {reverseDict[computer_choice]} ")
         if user_choice == computer_choice:
             print("this game has been drawn")
